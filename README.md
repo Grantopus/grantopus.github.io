@@ -39,5 +39,3 @@ The new website must effectively implement the following key features:
 | **Integration** | Potential integration with CRM/Email marketing tools for lead nurturing. |
 
 ---
-
-Would you like to detail the **Technology Stack** you plan to use (e.g., React, WordPress, Django, etc.) or break down the project into initial **Milestones**?
