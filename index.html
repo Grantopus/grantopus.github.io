@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grantopus | Strategic Fundraising & Carbon Advisory</title>
+    <meta
+      name="description"
+      content="Strategic Fundraising and Carbon Advisory for Mission-Driven Organisations. Leverage $30M+ experience to drive high-impact solutions."
+    />
+
+    <!-- Google Fonts: Playfair Display for headings, Open Sans for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- === CSS STYLES START HERE === -->
+    <style>
+      /* --- Branding Variables & Reset --- */
+      :root {
+        --primary-green: #0d3b2e; /* Deep Green */
+        --accent-gold: #d4af37; /* Gold */
+        --off-white: #faf9f6; /* Background */
+        --text-dark: #222222;
+
+        --font-heading: "Playfair Display", serif;
+        --font-body: "Open Sans", sans-serif;
+      }
+
+      /* Removed corrupted/unused CSS fragments and kept only the necessary utilities for clarity */
+      .blog-category {
+        font-size: 0.85rem;
+        color: #777;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--font-body);
+        color: var(--text-dark);
+        background-color: var(--off-white);
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+
+      /* --- Utility Classes --- */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .section-padding {
+        padding: 5rem 0;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      /* Utility styles for section subtitles */
+      .section-subtitle-dark {
+        max-width: 800px;
+        margin: 0 auto 3rem;
+      }
+      .section-subtitle-light {
+        max-width: 700px;
+        margin: 0 auto 3rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* --- Typography --- */
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-heading);
+        color: var(--primary-green);
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+      }
+      h2 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+      }
+      h3 {
+        font-size: clamp(1.4rem, 3vw, 2rem);
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      /* --- Buttons and CTAs --- */
+      .cta-button {
+        display: inline-block;
+        padding: 0.9rem 2rem;
+        margin: 0.5rem 0.75rem 0.5rem 0;
+        border: 2px solid transparent;
+        border-radius: 8px; /* Rounded corners on all elements */
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .cta-primary {
+        background-color: var(--accent-gold);
+        color: var(--primary-green);
+      }
+
+      .cta-secondary {
+        background-color: var(--accent-gold);
+        color: var(--off-white);
+        border-color: var(--primary-green);
+      }
+
+      .cta-primary:hover {
+        background-color: #c09a30;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .cta-secondary:hover {
+        background-color: transparent;
+        color: var(--primary-green);
+        border-color: var(--primary-green);
+      }
+
+      /* --- Navigation Bar --- */
+      .header-nav {
+        background-color: var(--primary-green);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-family: var(--font-heading);
+        color: var(--off-white);
+        font-size: 1.8rem;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .nav-menu a {
+        color: var(--off-white);
+        text-decoration: none;
+        margin-left: 1.5rem;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      .nav-menu a:hover {
+        color: var(--accent-gold);
+      }
+
+      /* --- Section: Home Hero --- */
+      #home {
+        background: linear-gradient(
+            rgba(13, 59, 46, 0.9),
+            rgba(13, 59, 46, 0.95)
+          ),
+          url("https://placehold.co/1200x600/0D3B2E/FAF9F6?text=High-Impact+African+Project")
+            no-repeat center center/cover;
+        color: var(--off-white);
+        padding: 10rem 0;
+        text-align: center;
+      }
+
+      #home h1 {
+        color: var(--accent-gold);
+        margin-bottom: 0.5rem;
+      }
+
+      #home .sub-headline {
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        max-width: 900px;
+        margin: 0 auto 3rem;
+        font-weight: 400;
+      }
+
+      /* Impact Snapshot */
+      .impact-snapshot {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 4rem;
+        gap: 2rem;
+      }
+
+      .impact-item {
+        padding: 1rem;
+        text-align: center;
+        min-width: 180px;
+      }
+
+      .impact-item strong {
+        display: block;
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        color: var(--accent-gold);
+      }
+
+      .impact-item span {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        opacity: 0.8;
+      }
+
+      /* Partner Logos */
+      .partner-logos {
+        padding: 3rem 0;
+        text-align: center;
+        background-color: #f0f0eb;
+      }
+
+      .partner-logos p {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 1.5rem;
+      }
+
+      .logo-group {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .logo-group img {
+        height: 35px; /* Mobile size */
+        opacity: 0.7; /* Subtly dimmed for visual effect */
+        transition: opacity 0.3s;
+      }
+
+      .logo-group img:hover {
+        opacity: 1; /* Fully visible on hover */
+      }
+
+      @media (min-width: 768px) {
+        .logo-group img {
+          height: 45px; /* Larger size on tablet/desktop */
+        }
+      }
+
+      /* --- Section: About Us --- */
+      #about {
+        background-color: var(--off-white);
+      }
+
+      #about .content-grid {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .founder-photo {
+        flex: 1;
+        max-width: 350px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .founder-photo img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .about-text {
+        flex: 2;
+      }
+
+      .about-text .title-gold {
+        color: var(--accent-gold);
+        font-family: var(--font-body);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .mission-statement {
+        border-left: 4px solid var(--accent-gold);
+        padding-left: 1rem;
+        margin: 2rem 0;
+      }
+
+      /* --- Section: Services --- */
+      #services {
+        background-color: var(--primary-green);
+        color: var(--off-white);
+      }
+
+      #services h2,
+      #services h3 {
+        color: var(--off-white);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .service-card {
+        background-color: rgba(255, 255, 255, 0.08);
+        padding: 2.5rem;
+        border-radius: 10px;
+        border-top: 5px solid var(--accent-gold);
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        transform: translateY(-5px);
+      }
+
+      .service-card ul {
+        list-style: none;
+        margin-top: 1rem;
+        padding-left: 0;
+      }
+
+      .service-card ul li {
+        padding-left: 1.5rem;
+        position: relative;
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+      }
+
+      .service-card ul li:before {
+        content: "✓";
+        color: var(--accent-gold);
+        font-weight: 700;
+        position: absolute;
+        left: 0;
+      }
+
+      /* --- Section: Impact & Clients --- */
+      #impact {
+        background-color: var(--off-white);
+      }
+      .case-study-grid {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .case-study {
+        background-color: #f7f7f3;
+        padding: 2.5rem;
+        border-radius: 10px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .case-study .client-name {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--accent-gold);
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      .case-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      .case-detail-box h4 {
+        color: var(--primary-green);
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .results-box {
+        background-color: var(--primary-green);
+        color: var(--off-white);
+        padding: 1.5rem;
+        border-radius: 8px;
+      }
+
+      .results-box strong {
+        display: block;
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        color: var(--accent-gold);
+        margin-bottom: 0.5rem;
+      }
+
+      .testimonial {
+        background-color: var(--primary-green);
+        color: var(--off-white);
+        padding: 3rem;
+        border-radius: 10px;
+        margin: 3rem 0;
+        font-style: italic;
+        font-size: 1.1rem;
+        text-align: center;
+      }
+
+      .testimonial footer {
+        margin-top: 1rem;
+        font-weight: 600;
+        font-style: normal;
+        color: var(--accent-gold);
+      }
+
+      /* --- Section: Resources --- */
+      #resources {
+        background-color: #f7f7f3;
+      }
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .blog-post {
+        background-color: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s;
+      }
+
+      .blog-post:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .blog-post a {
+        color: var(--accent-gold);
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 0.5rem;
+      }
+
+      /* --- Section: Contact --- */
+      #contact {
+        background-color: var(--primary-green);
+        color: var(--off-white);
+      }
+
+      #contact h2,
+      #contact h3 {
+        color: var(--off-white);
+      }
+
+      .contact-grid {
+        display: flex;
+        gap: 4rem;
+        margin-top: 3rem;
+      }
+
+      .contact-form-area {
+        flex: 1;
+        max-width: 600px; /* Constrain width for better readability */
+        margin: 0 auto; /* Center the contact block */
+      }
+
+      .calendly-area {
+        display: none; /* Removed the calendly area */
+      }
+
+      /* NEW STYLES FOR DIRECT CONTACT LINKS */
+      .contact-link-block {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.25rem;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.15
+        ); /* Slightly lighter background */
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: var(--off-white);
+        transition: background-color 0.3s, transform 0.2s;
+        border-left: 5px solid var(--accent-gold); /* A subtle accent */
+      }
+
+      .contact-link-block:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+        transform: translateX(5px);
+      }
+
+      .contact-icon {
+        font-size: 1.8rem;
+        color: var(--accent-gold);
+        min-width: 40px; /* fixed width for alignment */
+        text-align: center;
+      }
+
+      .contact-details {
+        flex-grow: 1;
+      }
+
+      .contact-details span.label {
+        display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.7;
+      }
+
+      .contact-details span.value {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+      /* END NEW STYLES */
+
+      /* --- Footer --- */
+      .footer {
+        background-color: var(--text-dark);
+        color: #ccc;
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 0.85rem;
+      }
+
+      .footer a {
+        color: var(--accent-gold);
+        text-decoration: none;
+        margin: 0 0.5rem;
+      }
+
+      /* --- Mobile Responsiveness --- */
+      @media (max-width: 992px) {
+        .nav-menu {
+          display: none; /* Simple fixed navigation for this single-file demo */
+        }
+        .header-nav .container {
+          justify-content: center;
+        }
+
+        #about .content-grid,
+        .contact-grid {
+          flex-direction: column;
+        }
+
+        .founder-photo {
+          max-width: 100%;
+        }
+
+        /* contact-form-area should always be full width on mobile */
+        .contact-form-area {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+    <!-- === CSS STYLES END HERE === -->
+  </head>
+
+  <body>
+    <!-- Header/Navigation Bar -->
+    <header class="header-nav">
+      <div class="container">
+        <a href="#home" class="logo">Grantopus</a>
+        <nav class="nav-menu">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#impact">Impact</a>
+          <a href="#resources">Resources</a>
+          <a
+            href="#contact"
+            class="cta-button cta-primary"
+            style="margin-left: 2rem"
+            >Consultation</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- 1. Homepage: The First Impression Expert -->
+    <section id="home">
+      <div class="container">
+        <h1 class="font-bold">
+          Strategic Fundraising and Carbon Advisory for Mission-Driven
+          Organisations.
+        </h1>
+        <p class="sub-headline">
+          Leveraging over a decade of experience to mobilise resources and drive
+          high-impact, tech-enabled solutions that transform service delivery at
+          scale.
+        </p>
+
+        <div class="cta-group">
+          <!-- Updated button to link to contact/consultation -->
+          <a href="#contact" class="cta-button cta-primary"
+            >Schedule a Consultation</a
+          >
+          <a href="#services" class="cta-button cta-secondary"
+            >View Our Services</a
+          >
+        </div>
+
+        <!-- Impact Snapshot -->
+        <div class="impact-snapshot">
+          <div class="impact-item">
+            <strong>Over $30 million</strong>
+            <span>in funding mobilised</span>
+          </div>
+          <div class="impact-item">
+            <strong>4 million+</strong>
+            <span>people impacted across 10 African countries</span>
+          </div>
+          <div class="impact-item">
+            <strong>$45M</strong>
+            <span>initiatives catalysed (WASH, Clean Cooking, Energy)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="partner-logos">
+      <div class="container">
+        <p>Past Partners and Donors:</p>
+        <!-- Corrected the placement of this paragraph which was mistakenly inside a logo group -->
+        <div class="logo-group" id="donor-logos-container">
+          <!-- Logos will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Us Page: The Relationship Builder -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <h2 class="text-center">Building Trust Through Expertise</h2>
+        <!-- Corrected placement of subtitle -->
+        <p class="text-center section-subtitle-dark">
+          Grantopus is driven by a deep commitment to high-impact work and a
+          history of proven success.
+        </p>
+
+        <div class="content-grid">
+          <div class="founder-photo">
+            <!-- Kept user's requested .png path -->
+            <img
+              src="assets/headshot/christine_muhoro.png"
+              alt="Christine Muhoro smiling confidently in professional attire, standing against a neutral background that conveys a sense of approachability and expertise"
+              onerror="this.onerror=null; this.src='https://placehold.co/350x450/0D3B2E/D4AF37?text=Christine+Muhoro';"
+            />
+          </div>
+          <div class="about-text">
+            <p class="title-gold">Founder's Profile</p>
+            <h3>Christine Muhoro</h3>
+            <p>
+              A strategic and mission-driven fundraising and development leader
+              with **10+ years of experience** mobilising resources, driving
+              communications, and leading multi-country programs across Africa.
+            </p>
+            <p>
+              Christine brings a **rare blend of strategic oversight and
+              operational execution**—she designs the strategy and knows how to
+              make it work on the ground. Her commitment is to **equity-driven,
+              tech-enabled solutions** that transform service delivery at scale.
+            </p>
+
+            <div class="mission-statement">
+              <h3>Our Philosophy: Quiet, Persistent Excellence</h3>
+              <p>
+                We empower organisations with the financial and strategic
+                clarity needed to achieve their highest impact goals, navigating
+                the complex landscape of global development funding and climate
+                finance with quiet, persistent excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Services Page: The Solutions Expert -->
+    <section id="services" class="section-padding">
+      <div class="container">
+        <h2 class="text-center">Our Core Advisory Solutions</h2>
+        <!-- Corrected placement of subtitle -->
+        <p class="text-center section-subtitle-light">
+          We structure our offerings around the three critical needs of
+          mission-driven organisations.
+        </p>
+
+        <div class="services-grid">
+          <!-- Service 1: Grants & Fundraising Strategy (FIXED: Card structure restored) -->
+          <div class="service-card">
+            <h3>1. Grants & Fundraising Strategy</h3>
+            <p>
+              From pipeline development to final submission, we ensure your
+              proposals are compelling, compliant, and aligned with donor
+              priorities.
+            </p>
+            <ul>
+              <li>End-to-end proposal development and grant writing.</li>
+              <li>
+                Diversifying donor portfolios for long-term sustainability.
+              </li>
+              <li>
+                Aligning proposals with major donor requirements (USAID, UKAID,
+                etc.).
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 2: Carbon Advisory & Climate Finance (FIXED: Card structure restored) -->
+          <div class="service-card">
+            <h3>2. Carbon Advisory & Climate Finance</h3>
+            <p>
+              Unlock new, sustainable revenue streams by integrating carbon
+              financing into your climate and development projects.
+            </p>
+            <ul>
+              <li>
+                Carbon financing integration strategy and pathway planning.
+              </li>
+              <li>Developing custom carbon impact calculators and models.</li>
+              <li>
+                Enhancing climate impact positioning for investment readiness.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 3: Strategic Consulting (FIXED: Card structure restored) -->
+          <div class="service-card">
+            <h3>3. Strategic Consulting</h3>
+            <p>
+              Gain the operational clarity and strategic oversight needed for
+              market expansion and robust program delivery.
+            </p>
+            <ul>
+              <li>
+                Consulting for market expansion and technology development.
+              </li>
+              <li>Expertise in M&E systems and impact measurement.</li>
+              <li>
+                Development and implementation of Gender Equality and Social
+                Inclusion (GESI) policies.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Impact & Clients Page: The Success Story Specialist -->
+    <section id="impact" class="section-padding">
+      <div class="container">
+        <h2 class="text-center">Our Impact: Case Studies</h2>
+        <!-- Corrected placement of subtitle -->
+        <p class="text-center section-subtitle-dark">
+          We measure success by the capital we mobilize and the number of lives
+          and markets we help transform.
+        </p>
+
+        <div class="case-study-grid">
+          <!-- Case Study 1: Global Off-Grid Solar Leader (FIXED: Inner structure restored) -->
+          <div class="case-study">
+            <p class="client-name">
+              Case Study 1: Global Off-Grid Solar Leader
+            </p>
+            <h3>Unlocking Carbon and Grant Revenue</h3>
+            <div class="case-details">
+              <div class="case-detail-box">
+                <h4>The Problem</h4>
+                <p>
+                  Client needed to expand its grant application pipeline and
+                  unlock new revenue from carbon financing to meet ambitious
+                  growth targets.
+                </p>
+              </div>
+              <div class="case-detail-box">
+                <h4>The Solution</h4>
+                <p>
+                  Grantopus led the global strategy for grants and carbon
+                  financing, developed high-value proposals, and forged
+                  partnerships with Ministries of Energy.
+                </p>
+              </div>
+              <div class="results-box">
+                <h4>Key Results</h4>
+                <p>
+                  <strong>$11M</strong> increase in the grant application
+                  pipeline
+                </p>
+                <p><strong>80%</strong> increase in grant revenue collection</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 2: Leading Clean Cookstove Manufacturer (FIXED: Inner structure restored) -->
+          <div class="case-study">
+            <p class="client-name">
+              Case Study 2: Leading Clean Cookstove Manufacturer
+            </p>
+            <h3>Fueling Commercial Scale-Up</h3>
+            <div class="case-details">
+              <div class="case-detail-box">
+                <h4>The Problem</h4>
+                <p>
+                  Required catalytic capital for market expansion and new
+                  technology deployment across nine critical African markets.
+                </p>
+              </div>
+              <div class="case-detail-box">
+                <h4>The Solution</h4>
+                <p>
+                  Designed and executed a regional grants fundraising strategy
+                  specifically to fuel commercial scale-up and innovation
+                  funding.
+                </p>
+              </div>
+              <div class="results-box">
+                <h4>Key Results</h4>
+                <p>
+                  Secured an **$18M** increase in the active grant portfolio
+                </p>
+                <p>
+                  Unlocked **$4M** in grant funding for commercial expansion
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integrated Testimonial (FIXED: Content restored) -->
+        <blockquote class="testimonial">
+          “Christine’s strategic mind and deep understanding of the donor
+          landscape were transformative. Her ability to translate complex
+          technical concepts into compelling, fundable proposals is unmatched.
+          She is a true partner in impact.”
+          <footer>— Executive Director, Global Energy Access Initiative</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 5. Resources Page: The Thought Leader -->
+    <section id="resources" class="section-padding">
+      <div class="container">
+        <h2 class="text-center">Thought Leadership</h2>
+        <!-- Corrected placement of subtitle -->
+        <p class="text-center section-subtitle-dark">
+          We share proprietary insights and analyses to establish authority and
+          improve industry knowledge.
+        </p>
+
+        <div class="blog-grid">
+          <div class="blog-post">
+            <p class="blog-category">Clean Energy Policy</p>
+            <h4>
+              Shaping National Clean Energy Policy: Lessons from the Field
+            </h4>
+            <p>
+              Analyzing key strategies for private sector engagement in policy
+              development across Sub-Saharan Africa.
+            </p>
+            <a href="https://www.google.com/search?q=%23"
+              >Read Article &rarr;</a
+            >
+          </div>
+          <div class="blog-post">
+            <p class="blog-category">Climate Resilience</p>
+            <h4>The Role of Carbon Finance in Climate Resilience</h4>
+            <p>
+              How carbon markets can provide predictable, long-term funding for
+              climate adaptation and mitigation efforts.
+            </p>
+            <a href="https://www.google.com/search?q=%23"
+              >Read Article &rarr;</a
+            >
+          </div>
+          <div class="blog-post">
+            <p class="blog-category">Donor Engagement</p>
+            <h4>Best Practices in Donor Engagement and Stewardship</h4>
+            <p>
+              Tips for moving beyond grant proposals to foster lasting,
+              high-trust partnerships with global foundations and aid agencies.
+            </p>
+            <a href="https://www.google.com/search?q=%23"
+              >Read Article &rarr;</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Contact Page: The Appointment Setter -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <h2 class="text-center">Start Your Grantopus Engagement</h2>
+        <!-- Corrected placement of subtitle -->
+        <p class="text-center section-subtitle-light">
+          We're ready to become your 24/7 sales team member. Connect with us to
+          discuss your strategic needs.
+        </p>
+
+        <!-- contact-grid now contains only one flex item, which will span full width -->
+        <div class="contact-grid">
+          <div class="contact-form-area">
+            <h3>Connect Directly</h3>
+            <!-- Corrected placement of sub-paragraph -->
+            <p class="contact-subtext">
+              Reach out to the Grantopus team using one of these quick contact
+              methods. We aim to respond within 24 hours.
+            </p>
+
+            <!-- WhatsApp Link (FIXED: Rel attribute added for security) -->
+            <a
+              href="https://wa.me/254722898989"
+              target="_blank"
+              rel="noopener"
+              class="contact-link-block"
+            >
+              <div class="contact-icon">📱</div>
+              <!-- Using Emoji as icon placeholder -->
+              <div class="contact-details">
+                <span class="label">WhatsApp Message</span>
+                <span class="value">+254 722 898 989</span>
+              </div>
+            </a>
+
+            <!-- Telephone Link (Same number for simplicity) -->
+            <a href="tel:+254722898989" class="contact-link-block">
+              <div class="contact-icon">📞</div>
+              <div class="contact-details">
+                <span class="label">Direct Call</span>
+                <span class="value">+254 722 898 989</span>
+              </div>
+            </a>
+
+            <!-- Email Link -->
+            <a href="mailto:consult@grantopus.com" class="contact-link-block">
+              <div class="contact-icon">📧</div>
+              <div class="contact-details">
+                <span class="label">Send Email</span>
+                <span class="value">consult@grantopus.com</span>
+              </div>
+            </a>
+
+            <!-- LinkedIn Link (FIXED: Rel attribute added for security) -->
+            <a
+              href="https://www.linkedin.com/in/cmuhoro/"
+              target="_blank"
+              rel="noopener"
+              class="contact-link-block"
+            >
+              <div class="contact-icon">🔗</div>
+              <div class="contact-details">
+                <span class="label">Professional Network</span>
+                <span class="value">LinkedIn Profile</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2025 Grantopus Consultancy:Fundraising & Carbon Advisory. All
+          Rights Reserved.
+        </p>
+        <p>
+          <a href="https://www.google.com/search?q=%23">Privacy Policy</a> |
+          <a href="https://www.google.com/search?q=%23">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- === JAVASCRIPT LOGIC START HERE === -->
+    <script>
+      // Simple JS for Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          // Ignore hash clicks that don't point to a section on this page
+          if (this.getAttribute("href") === "#") return;
+
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // === DYNAMIC DONOR LOGO LOADING (Using PNG files in SVGLOGS directory) ===
+      document.addEventListener("DOMContentLoaded", () => {
+        // Updated list to reflect PNG files
+        const logoFilenames = [
+          "usaid.png",
+          "ukaid.png",
+          "world_bank.png",
+          "giz.png",
+          "unicef.png",
+          "sida.png",
+          "aecf_africa.png",
+          "nefco.png",
+        ];
+
+        const logoContainer = document.getElementById("donor-logos-container");
+
+        if (logoContainer) {
+          logoFilenames.forEach((filename) => {
+            const img = document.createElement("img");
+
+            // 1. Generate descriptive alt text from the filename (e.g., "usaid.png" -> "USAID Logo")
+            const altText = filename
+              .replace(/\..+$/, "") // Remove file extension (.png)
+              .replace(/_/g, " ") // Replace underscores with spaces
+              .replace(/\b\w/g, (l) => l.toUpperCase()); // Capitalize first letter of each word
+
+            img.alt = `${altText} Logo`;
+
+            // 2. Generate text for the placeholder (e.g., "USAID" from "USAID Logo")
+            const textForPlaceholder = altText.split(" ")[0].toUpperCase();
+
+            // Define the local path (using the requested 'assets/SVGLOGS/') and the placeholder fallback URL
+            const localPath = `assets/SVGLOGS/${filename}`;
+            const placeholderUrl = `https://placehold.co/120x40/0D3B2E/D4AF37?text=${textForPlaceholder}`;
+
+            // 3. Set the image source to the expected local asset path.
+            img.src = localPath;
+            img.title = altText;
+
+            // 4. Fallback to a styled placeholder if the local PNG asset is not found.
+            img.onerror = `this.onerror=null; this.src='${placeholderUrl}'`;
+
+            logoContainer.appendChild(img);
+          });
+        }
+      });
+    </script>
+    <!-- === JAVASCRIPT LOGIC END HERE === -->
+  </body>
+</html>
