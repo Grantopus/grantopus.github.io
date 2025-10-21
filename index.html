@@ -138,6 +138,22 @@
         border-color: var(--primary-green);
       }
 
+      /* Keep CTA visible when clicked/focused (desktop + mobile) */
+      .cta-button:focus,
+      .cta-button:active {
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .cta-secondary:focus,
+      .cta-secondary:active {
+        background-color: var(--accent-gold) !important;
+        color: var(--off-white) !important;
+        border-color: var(--primary-green) !important;
+        transform: none;
+      }
+
       /* --- Navigation Bar --- */
       .header-nav {
         background-color: var(--primary-green);
